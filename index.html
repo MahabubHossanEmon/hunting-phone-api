@@ -13,10 +13,30 @@
         <h2 class="text-6xl mb-8">Hunting Phone</h2>
     </header>
 
-    <main>
+    <main class="container mx-auto mt-8">
+        <!--search result-->
+       
         <section>
+            
+            <input id="search-feild" class="bg-gray-500 text-white p-3 rounded-lg" type="text" placeholder="search..." class="input input-bordered w-full max-w-xs" />
+            <button onclick="handleSearch()" class="btn btn-accent">Accent</button>
+                <!--another search feild-->
+        <!-- <input id="search-feild2" class="bg-gray-500 text-white p-3 rounded-lg" type="text" placeholder="search here" class="input input-bordered w-full max-w-xs" />
+        <button onclick="handleSearch2()" class="btn btn-primary">Primary</button> -->
+      
+        </section>
+    
+        <section >
+            <!--spinner or loader -->
+            <div id="loading-spinner" class="text-center mt-20 hidden">
+                <span class="loading loading-spinner loading-md"></span>
+            </div>
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
               
+            </div>
+            <!--show all button-->
+            <div onclick="handleShowAll()" id="show-all-container" class="hidden text-center my-4">
+                <button class="btn btn-accent">show all</button>
             </div>
         </section>
     </main>
