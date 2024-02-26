@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunting Phone Api</title>
-    
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
     <header>
         <h2 class="text-6xl mb-8">Hunting Phone</h2>
@@ -15,30 +17,47 @@
 
     <main class="container mx-auto mt-8">
         <!--search result-->
-       
+
         <section>
-            
-            <input id="search-feild" class="bg-gray-500 text-white p-3 rounded-lg" type="text" placeholder="search..." class="input input-bordered w-full max-w-xs" />
+
+            <input id="search-feild" class="bg-gray-500 text-white p-3 rounded-lg" type="text" placeholder="search..."
+                class="input input-bordered w-full max-w-xs" />
             <button onclick="handleSearch()" class="btn btn-accent">Accent</button>
-                <!--another search feild-->
-        <!-- <input id="search-feild2" class="bg-gray-500 text-white p-3 rounded-lg" type="text" placeholder="search here" class="input input-bordered w-full max-w-xs" />
+            <!--another search feild-->
+            <!-- <input id="search-feild2" class="bg-gray-500 text-white p-3 rounded-lg" type="text" placeholder="search here" class="input input-bordered w-full max-w-xs" />
         <button onclick="handleSearch2()" class="btn btn-primary">Primary</button> -->
-      
+
         </section>
-    
-        <section >
+
+        <section>
             <!--spinner or loader -->
             <div id="loading-spinner" class="text-center mt-20 hidden">
                 <span class="loading loading-spinner loading-md"></span>
             </div>
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-              
+
             </div>
             <!--show all button-->
             <div onclick="handleShowAll()" id="show-all-container" class="hidden text-center my-4">
                 <button class="btn btn-accent">show all</button>
             </div>
         </section>
+
+        <!--show details modal -->
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="">open modal</button> -->
+        <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <h3 id="show-details-phone-name" class="font-bold text-lg">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </main>
 
     <footer>
@@ -47,4 +66,5 @@
 
     <script src="js/phone.js"></script>
 </body>
+
 </html>
